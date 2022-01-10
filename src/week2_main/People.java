@@ -14,16 +14,18 @@ public class People {
 	
 	public void printAllPeople() {
 		
-		for (int i = 0; i < listOfPeople.size(); i++) {
-			
-			System.out.println(listOfPeople.get(i));
+//		for (int i = 0; i < listOfPeople.size(); i++) {
+		
+		for (Person p : this.listOfPeople) {
+			p.introduce();
+		
 		}
 	}
 	
 	public void findByName(String name) {
 		
 		for (int i = 0; i < listOfPeople.size(); i++) {
-			
+		
 			if (listOfPeople.get(i).getName().equalsIgnoreCase(name)) {
 				
 			listOfPeople.get(i).introduce();
