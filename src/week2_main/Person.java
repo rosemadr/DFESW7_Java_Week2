@@ -19,16 +19,7 @@ public class Person {
 	
 	
 	public void introduce() {
-		
 		System.out.println("Name: " + getName() + ", age: " + getAge() + ", job title: " + getJobTitle() + ".");
-		
-	
-		
-//		String introductionString = getName().concat(null)
-		
-		
-		
-		
 	}
 	
 	public String getName() {
@@ -46,7 +37,6 @@ public class Person {
 	
 	@Override
 		public String toString() {
-		
 		return "Name: " + getName() + ", age: " + getAge() + ", job title: " + getJobTitle() + ".";
 		
 		

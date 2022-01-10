@@ -14,10 +14,12 @@ public class Runner {
 		people.addPerson(person1);
 		people.addPerson(person2);
 		people.addPerson(person3);
+		people.addPerson(person4);
+		people.addPerson(new Person("Harley", 6, "Good Dog"));
 		
 ////		person1.introduce();
 //		
-//		People.printAllPeople();
+		people.printAllPeople();
 //		
 //		System.out.println(People.listOfPeople);
 		
