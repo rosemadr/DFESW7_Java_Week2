@@ -5,7 +5,12 @@ import java.util.List;
 
 public class People {
 	
-	public List<Person> listOfPeople = new ArrayList<>();
+	private List<Person> listOfPeople = new ArrayList<>();
+	
+	
+	public void addPerson(Person p) {
+		this.listOfPeople.add(p);
+	}
 	
 	public void printAllPeople() {
 		
@@ -26,6 +31,7 @@ public class People {
 			}
 		
 	}
+		
 	
 }	
 

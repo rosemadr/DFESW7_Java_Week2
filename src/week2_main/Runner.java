@@ -11,9 +11,9 @@ public class Runner {
 		
 		People people = new People();
 		
-		people.listOfPeople.add(person1);
-		people.listOfPeople.add(person2);
-		people.listOfPeople.add(person3);
+		people.addPerson(person1);
+		people.addPerson(person2);
+		people.addPerson(person3);
 		
 ////		person1.introduce();
 //		
