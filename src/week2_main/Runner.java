@@ -20,7 +20,7 @@ public class Runner {
 //		
 //		System.out.println(People.listOfPeople);
 		
-		people.findByName("Sue");
+		people.findByName("Madi");
 
 	}
 
