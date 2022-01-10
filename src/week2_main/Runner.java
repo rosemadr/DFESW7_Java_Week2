@@ -7,6 +7,7 @@ public class Runner {
 		Person person1 = new Person("Madi", 26, "Training to be a Software Dev");
 		Person person2 = new Person("Sue", 26, "PhD student");
 		Person person3 = new Person("Milli", 22, "Undergrad");
+		Person person4 = new Person("Tim", 59, "Software Dev Team Lead");
 		
 		People people = new People();
 		
@@ -20,7 +21,7 @@ public class Runner {
 //		
 //		System.out.println(People.listOfPeople);
 		
-		people.findByName("Madi");
+		people.findByName("madi");
 
 	}
 

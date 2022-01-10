@@ -19,7 +19,7 @@ public class People {
 		
 		for (int i = 0; i < listOfPeople.size(); i++) {
 			
-			if (name == listOfPeople.get(i).getName()) {
+			if (listOfPeople.get(i).getName().equalsIgnoreCase(name)) {
 				
 			listOfPeople.get(i).introduce();
 				
