@@ -34,7 +34,7 @@ public class Plane extends Vehicle {
 	
 	@Override
 	public String toString() {
-		return "VEHICLE TYPE: Plane;\nName: " + getName() + ", Movement Type: " + getMovementType() + ", Manufacturer: " +getManufacturer() + 
+		return "VEHICLE TYPE: Plane;\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
 				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() + ", Maximum alitiude: " + getMaxAltitude() + "m." ;
 	}
 	

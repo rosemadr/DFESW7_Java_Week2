@@ -8,8 +8,20 @@ public class Runner {
 	
 //	System.out.println(plane1.toString());
 	
-	plane1.move();
+//	plane1.move();
+	
+	Motorbike bike1 = new Motorbike("", "Harley-Davidson", "Street Bob", 200, true, 2, false);
+	
+//	System.out.println(bike1.toString());
+	
+	Garage garage = new Garage();
+	
+	
+	garage.addToGarage(bike1);
 
+	garage.addToGarage(plane1);
+	
+	garage.printGarage();
 	}
 
 }
