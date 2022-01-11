@@ -19,12 +19,14 @@ public class Runner {
 
 ////		person1.introduce();
 //		
-		people.printAllPeople();
+//		people.printAllPeople();
 //		
 //		System.out.println(People.listOfPeople);
 
-		people.findByName("madi");
+		people.findByName("madi").introduce();
+		
 
+		System.out.println(people.findByName("milli").equals(person3));
 	}
 
 }

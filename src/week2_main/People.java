@@ -21,17 +21,19 @@ public class People {
 		}
 	}
 
-	public void findByName(String name) {
+	public Person findByName(String name) {
+		
+		Person foundPerson = null;
 
 		for (int i = 0; i < listOfPeople.size(); i++) {
 
 			if (listOfPeople.get(i).getName().equalsIgnoreCase(name)) {
 
-				listOfPeople.get(i).introduce();
+			foundPerson =  listOfPeople.get(i);
 
 			}
 
-		}
+		} return foundPerson;
 
 	}
 
