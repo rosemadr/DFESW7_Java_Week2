@@ -36,7 +36,7 @@ public class Garage {
 				Vehicle vehicle = garageContents.get(i);
 
 				if (vehicle.isWorking() == true) {
-					System.out.println("Your vehicle is already working.");
+					System.out.println("Your vehicle is already working.\n");
 				} else {
 
 					vehicle.setWorking(true);
@@ -53,7 +53,7 @@ public class Garage {
 					if (vehicle.getType().equals("Car")) {
 						bill -= 75;
 
-					} String billStr = "Your vehicle has been fixed, your invoice for £" + bill + " will be sent to you directly.";
+					} String billStr = "Your vehicle has been fixed, your invoice for £" + bill + " will be sent to you directly.\n";
 
 					System.out.println(billStr);
 				}
@@ -69,7 +69,7 @@ public class Garage {
 		for (int i = 0; i < garageContents.size(); i++) {
 			if (garageContents.get(i).getName().equalsIgnoreCase(vName)) {
 				this.garageContents.remove(i);
-				String removeString = "The " + vName + " has been removed from the garage.";
+				String removeString = "The " + vName + " has been removed from the garage.\n";
 				System.out.println(removeString);
 			}
 		}
@@ -81,7 +81,7 @@ public class Garage {
 			if (v.getType().equalsIgnoreCase(type)) {
 				String vName = v.getName();
 				this.garageContents.remove(v);
-				String removeString = "The " + vName + " has been removed from the garage.";
+				String removeString = "The " + vName + " has been removed from the garage.\n";
 				System.out.println(removeString);
 			}
 		}

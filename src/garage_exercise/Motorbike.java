@@ -14,7 +14,7 @@ public class Motorbike extends Vehicle {
 	public void addSidecar() {
 		
 		if (hasSidecar == true) {
-			System.out.println("This motorbike already has a sidecar.");
+			System.out.println("This motorbike already has a sidecar.\n");
 			} else { 
 				hasSidecar = true;
 				int numWheels = getNumOfWheels();
@@ -36,7 +36,7 @@ public class Motorbike extends Vehicle {
 	@Override
 	public String toString() {
 		return "VEHICLE TYPE: " + getType() + "\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
-				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() +  "\nCurrently has sidecar: " + hasSidecar + ".";
+				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() +  "\nCurrently has sidecar: " + hasSidecar + ".\n";
 	}
 
 }

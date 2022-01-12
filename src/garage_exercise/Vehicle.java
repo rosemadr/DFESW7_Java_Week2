@@ -112,8 +112,8 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Name: " + name + ", Movement Type: " + movementType + ", Manufacturer: " + manufacturer + 
-				", Maximum Speed: " + maxSpeed + "km/h, Number of wheels: " + numOfWheels + ".";
+		return "Vehicle Type: " + getType() + "\nName: " + name + ", Manufacturer: " + manufacturer + 
+				", Maximum Speed: " + maxSpeed + "km/h, Number of wheels: " + numOfWheels + ".\n";
 	}
 	
 	

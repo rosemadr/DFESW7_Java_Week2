@@ -12,6 +12,6 @@ public class Car extends Vehicle {
 	@Override
 	public String toString() {
 		return "VEHICLE TYPE: " + getType() + "\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
-				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() +  ".";
+				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() +  ".\n";
 	}
 }

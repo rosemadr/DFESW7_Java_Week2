@@ -39,7 +39,7 @@ public class Runner {
 //	
 //	garage.removeAllType("car");
 	
-//	garage.printGarage();
+	garage.printGarage();
 	
 	
 	
