@@ -29,7 +29,7 @@ public class Garage {
 
 	public void fixVehicle(String vName) {
 
-		int bill = 100;
+//		int bill = 100;
 
 		for (int i = 0; i < garageContents.size(); i++) {
 			if (garageContents.get(i).getName().equalsIgnoreCase(vName)) {
@@ -41,19 +41,24 @@ public class Garage {
 
 					vehicle.setWorking(true);
 
-					bill = vehicle.getMaxSpeed() * vehicle.getNumOfWheels();
+					int bill = vehicle.calcBill();
 
-					if (vehicle.getType().equals("Motorbike")) {
-						bill += 100;
+//					bill = vehicle.getMaxSpeed() * vehicle.getNumOfWheels();
+//
+//					if (vehicle.getType().equals("Motorbike")) {
+//						bill += 100;
+//						Motorbike bike = (Motorbike) vehicle;
+//						if (bike.getSidecar() == true) {
+//							bill += 500;
+//						}
+//
+//					} else if (vehicle.getType().equals("Plane")) {
+//						bill += 1500;
+//
+//					}
+//					if (vehicle.getType().equals("Car")) {
+//						bill -= 75;
 
-					} else if (vehicle.getType().equals("Plane")) {
-						bill += 1500;
-
-					}
-					if (vehicle.getType().equals("Car")) {
-						bill -= 75;
-
-					}
 					String billStr = "Your vehicle has been fixed, your invoice for £" + bill
 							+ " will be sent to you directly.\n";
 

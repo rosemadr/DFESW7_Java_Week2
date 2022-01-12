@@ -2,7 +2,7 @@ package garage_exercise;
 
 import java.util.Objects;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	// attributes
 
@@ -39,6 +39,16 @@ public class Vehicle {
 
 		}
 	}
+
+	public void crash() {
+		this.setWorking(false);
+		String typeStr = this.getType();
+
+		System.out.println(
+				"CRASSSHHHHHHHHH\n\nHmmm, I think you need to take this " + typeStr.toLowerCase() + " to the shop.\n");
+	}
+
+	public abstract int calcBill();
 
 	@Override
 	public int hashCode() {

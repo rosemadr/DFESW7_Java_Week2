@@ -23,9 +23,14 @@ public class Runner {
 		garage.addToGarage(car1);
 		garage.addToGarage(car2);
 		garage.addToGarage(plane1);
+
+		bike1.addSidecar();
+
+		bike1.crash();
+
+		garage.fixVehicle("street BOB");
 //	
 //	garage.printGarage();
-
 
 //	
 //	garage.fixVehicle("Concorde");
@@ -34,7 +39,7 @@ public class Runner {
 //	
 //	garage.removeAllType("car");
 
-		garage.printGarage();
+//		garage.printGarage();
 
 	}
 
