@@ -26,6 +26,13 @@ public class Plane extends Vehicle {
 	}
 
 	@Override
+	public int calcBill() {
+		int bill = 2 * this.getMaxSpeed() * this.getNumOfWheels();
+		return bill;
+
+	}
+
+	@Override
 	public String toString() {
 		return "VEHICLE TYPE: " + getType() + "\nName: " + getName() + ", Manufacturer: " + getManufacturer()
 				+ "\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels()

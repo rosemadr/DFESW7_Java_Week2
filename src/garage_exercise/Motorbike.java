@@ -24,9 +24,17 @@ public class Motorbike extends Vehicle {
 			maxSpeed -= 100;
 			setMaxSpeed(maxSpeed);
 
-
 		}
 
+	}
+
+	@Override
+	public int calcBill() {
+		int bill = this.getMaxSpeed() * this.getNumOfWheels() + 100;
+		if (this.getSidecar() == true) {
+			bill += 500;
+		}
+		return bill;
 	}
 
 	public boolean getSidecar() {
