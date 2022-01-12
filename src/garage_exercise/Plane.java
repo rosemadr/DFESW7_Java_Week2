@@ -7,8 +7,8 @@ public class Plane extends Vehicle {
 	
 
 
-	public Plane(String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels, int maxAltitude) {
-		super("fly", manufacturer, name, maxSpeed, isWorking, numOfWheels);
+	public Plane(String type, String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels, int maxAltitude) {
+		super("Plane", "fly", manufacturer, name, maxSpeed, isWorking, numOfWheels);
 		this.maxAltitude = maxAltitude;
 		
 		
@@ -34,7 +34,7 @@ public class Plane extends Vehicle {
 	
 	@Override
 	public String toString() {
-		return "VEHICLE TYPE: Plane;\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
+		return "VEHICLE TYPE: " + getType() + "\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
 				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() + ", Maximum alitiude: " + getMaxAltitude() + "m." ;
 	}
 	

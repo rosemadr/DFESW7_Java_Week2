@@ -1,5 +1,7 @@
 package garage_exercise;
 
+import java.util.Objects;
+
 public class Vehicle {
 	
 	//attributes
@@ -10,17 +12,23 @@ public class Vehicle {
 	private int maxSpeed;
 	private boolean isWorking;
 	private int numOfWheels;
+	private String type;
 	
 	//constructor
 	
-	public Vehicle(String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels) {
+	
+
+	public Vehicle(String type, String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels) {
 		super();
+		this.type = type;
 		this.movementType = movementType;
 		this.manufacturer = manufacturer;
 		this.name = name;
 		this.maxSpeed = maxSpeed;
 		this.isWorking = isWorking;
 		this.numOfWheels = numOfWheels;
+		
+		
 	}
 
 	public void move() {
@@ -32,6 +40,34 @@ public class Vehicle {
 		
 		}
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(isWorking, manufacturer, maxSpeed, movementType, name, numOfWheels);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vehicle other = (Vehicle) obj;
+		return isWorking == other.isWorking && Objects.equals(manufacturer, other.manufacturer)
+				&& maxSpeed == other.maxSpeed && Objects.equals(movementType, other.movementType)
+				&& Objects.equals(name, other.name) && numOfWheels == other.numOfWheels;
+	}
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	
 	public String getMovementType() {
 		return movementType;

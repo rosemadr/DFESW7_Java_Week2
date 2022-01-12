@@ -13,35 +13,84 @@ import java.util.List;
 //
 //Garage should have a method to remove multiple Vehicles by their type.
 
-
 public class Garage {
-	
+
 	private List<Vehicle> garageContents = new ArrayList<>();
-	
+
 	public void addToGarage(Vehicle v) {
 		this.garageContents.add(v);
 	}
-	
+
 	public void printGarage() {
 		for (Vehicle v : this.garageContents) {
-			v.toString();
+			System.out.println(v);
 		}
 	}
-	
-	public void removeFromGarage(String vName) {
-		
-		for (Vehicle i: this.garageContents) {
-			if (i.getName().equalsIgnoreCase(vName)) {
-				garageContents.remove(i);
-			}	
-			
-					
-//					i.garageContents.getName().equals
-//					
-//					garageContents.get(i).getName.equalsIgnoreCase(vName)) {
-//				
+
+	public void fixVehicle(String vName) {
+
+		int bill = 100;
+
+		for (int i = 0; i < garageContents.size(); i++) {
+			if (garageContents.get(i).getName().equalsIgnoreCase(vName)) {
+				Vehicle vehicle = garageContents.get(i);
+
+				if (vehicle.isWorking() == true) {
+					System.out.println("Your vehicle is already working.");
+				} else {
+
+					vehicle.setWorking(true);
+
+					bill = vehicle.getMaxSpeed() * vehicle.getNumOfWheels();
+
+					if (vehicle.getType().equals("Motorbike")) {
+						bill += 100;
+
+					} else if (vehicle.getType().equals("Plane")) {
+						bill += 1500;
+
+					}
+					if (vehicle.getType().equals("Car")) {
+						bill -= 75;
+
+					}
+				}
+			}
 
 		}
+		String billStr = "Your vehicle has been fixed, your invoice for £" + bill + " will be sent to you directly.";
+
+		System.out.println(billStr);
+
+	}
+
+	public void removeByName(String vName) {
+
+		for (int i = 0; i < garageContents.size(); i++) {
+			if (garageContents.get(i).getName().equalsIgnoreCase(vName)) {
+				this.garageContents.remove(i);
+				String removeString = "The " + vName + " has been removed from the garage.";
+				System.out.println(removeString);
+			}
+		}
+	}
+
+	public void removeAllType(String type) {
+
+		for (Vehicle v : new ArrayList<>(this.garageContents)) {
+			if (v.getType().equalsIgnoreCase(type)) {
+				String vName = v.getName();
+				this.garageContents.remove(v);
+				String removeString = "The " + vName + " has been removed from the garage.";
+				System.out.println(removeString);
+			}
+		}
+
+	}
+
+	public void emptyGarage() {
+		this.garageContents.clear();
+
 	}
 
 }

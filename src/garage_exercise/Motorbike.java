@@ -5,8 +5,8 @@ public class Motorbike extends Vehicle {
 	private boolean hasSidecar;
 	
 
-	public Motorbike(String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels, boolean hasSidecar) {
-		super("driv", manufacturer, name, maxSpeed, isWorking, numOfWheels);
+	public Motorbike(String type, String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels, boolean hasSidecar) {
+		super("Motorbike", "driv", manufacturer, name, maxSpeed, isWorking, numOfWheels);
 		this.hasSidecar = hasSidecar;
 		
 	}
@@ -27,10 +27,15 @@ public class Motorbike extends Vehicle {
 			}
 		
 	}
-
+	
+	public boolean getSidecar() {
+		return hasSidecar;
+	}
+	
+	
 	@Override
 	public String toString() {
-		return "VEHICLE TYPE: Motorbike;\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
+		return "VEHICLE TYPE: " + getType() + "\nName: " + getName() + ", Manufacturer: " +getManufacturer() + 
 				"\nMaximum Speed: " + getMaxSpeed() + "km/h, Number of wheels: " + getNumOfWheels() +  "\nCurrently has sidecar: " + hasSidecar + ".";
 	}
 
