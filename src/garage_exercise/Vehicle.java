@@ -3,9 +3,9 @@ package garage_exercise;
 import java.util.Objects;
 
 public class Vehicle {
-	
-	//attributes
-	
+
+	// attributes
+
 	private String movementType;
 	private String manufacturer;
 	private String name;
@@ -13,12 +13,11 @@ public class Vehicle {
 	private boolean isWorking;
 	private int numOfWheels;
 	private String type;
-	
-	//constructor
-	
-	
 
-	public Vehicle(String type, String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking, int numOfWheels) {
+	// constructor
+
+	public Vehicle(String type, String movementType, String manufacturer, String name, int maxSpeed, boolean isWorking,
+			int numOfWheels) {
 		super();
 		this.type = type;
 		this.movementType = movementType;
@@ -27,20 +26,20 @@ public class Vehicle {
 		this.maxSpeed = maxSpeed;
 		this.isWorking = isWorking;
 		this.numOfWheels = numOfWheels;
-		
-		
+
 	}
 
 	public void move() {
-		
-		if (isWorking == true) {		
-		System.out.println("This " + getName() + " is " + getMovementType() + "ing.");
-		
-		} else { System.out.println("Sorry this " + getName() + " is broken.");
-		
+
+		if (isWorking == true) {
+			System.out.println("This " + getName() + " is " + getMovementType() + "ing.");
+
+		} else {
+			System.out.println("Sorry this " + getName() + " is broken.");
+
 		}
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(isWorking, manufacturer, maxSpeed, movementType, name, numOfWheels);
@@ -59,7 +58,7 @@ public class Vehicle {
 				&& maxSpeed == other.maxSpeed && Objects.equals(movementType, other.movementType)
 				&& Objects.equals(name, other.name) && numOfWheels == other.numOfWheels;
 	}
-	
+
 	public String getType() {
 		return type;
 	}
@@ -68,28 +67,34 @@ public class Vehicle {
 		this.type = type;
 	}
 
-	
 	public String getMovementType() {
 		return movementType;
 	}
+
 	public void setMovementType(String movementType) {
 		this.movementType = movementType;
 	}
+
 	public String getManufacturer() {
 		return manufacturer;
 	}
+
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getMaxSpeed() {
 		return maxSpeed;
 	}
+
 	public void setMaxSpeed(int maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
@@ -112,15 +117,8 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle Type: " + getType() + "\nName: " + name + ", Manufacturer: " + manufacturer + 
-				", Maximum Speed: " + maxSpeed + "km/h, Number of wheels: " + numOfWheels + ".\n";
+		return "Vehicle Type: " + getType() + "\nName: " + name + ", Manufacturer: " + manufacturer
+				+ ", Maximum Speed: " + maxSpeed + "km/h, Number of wheels: " + numOfWheels + ".\n";
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

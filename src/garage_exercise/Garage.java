@@ -53,14 +53,15 @@ public class Garage {
 					if (vehicle.getType().equals("Car")) {
 						bill -= 75;
 
-					} String billStr = "Your vehicle has been fixed, your invoice for £" + bill + " will be sent to you directly.\n";
+					}
+					String billStr = "Your vehicle has been fixed, your invoice for £" + bill
+							+ " will be sent to you directly.\n";
 
 					System.out.println(billStr);
 				}
 			}
 
 		}
-		
 
 	}
 
