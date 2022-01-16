@@ -48,8 +48,12 @@ public class User {
 		return itemsBorrowed;
 	}
 
-	public void addItemsBorrowed(List<Item> item) {
-		this.itemsBorrowed.addAll(item);
+	public void addItemsBorrowed(Item item) {
+		this.itemsBorrowed.add(item);
+	}
+
+	public void removeItemsBorrowed(Item item) {
+		this.itemsBorrowed.remove(item);
 	}
 
 	public boolean isOverdueItems() {

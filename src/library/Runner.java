@@ -3,7 +3,10 @@ package library;
 public class Runner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		User me = new User(0,"Simcock-Brown", "Madeleine", <>, false);
+		
+		me.toString();
 
 	}
 
