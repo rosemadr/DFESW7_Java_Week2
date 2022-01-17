@@ -61,7 +61,8 @@ public class Library {
 
 	public void setupItem(Item item) {
 		if (validateItem(item) == true) {
-
+			item.canBeBorrowed(item);
+			item.calcBorrowLen(item);
 		} else {
 			System.out.println("Invalid item. Cannot remove that item as item not found.");
 		}

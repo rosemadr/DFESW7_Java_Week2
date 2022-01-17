@@ -13,19 +13,26 @@ public class Runner {
 		Journal j1 = new Journal("", 0, 0, "Science Fiction Studies", "SF-TH INC., DePauw University", 1, 13,
 				"SF, Stanislaw Lem", true);
 
-		b1.calcBorrowLen(b1);
+		Map m1 = new Map("", 0, 0, "Explorer 221", "Ordnance Survey", 1, "Coventry & Warwick");
 
 //		System.out.println(b1.toString());
 
 		Library library = new Library();
 //
+		System.out.println(j1.toString());
+
 		library.addToLibrary(b1);
 
-//		System.out.println(b1.toString());
-//
+		library.addToLibrary(j1);
+		library.setupItem(b1);
+
+//		System.out.println(j1.toString());
+
 		library.addUser(me);
-//
+
 		library.checkoutItem(b1, me);
+
+		System.out.println(me.toString());
 
 	}
 

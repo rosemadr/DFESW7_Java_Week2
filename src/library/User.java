@@ -66,8 +66,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userID=" + userID + ", surname=" + surname + ", forename=" + forename + ", itemsBorrowed="
-				+ itemsBorrowed + ", overdueItems=" + overdueItems + "]";
+		return "User: " + surname + ", " + forename + ", user id: " + userID + ",\nitems borrowed: " + itemsBorrowed
+				+ ", overdue items: " + overdueItems + ".";
 	}
 
 }
