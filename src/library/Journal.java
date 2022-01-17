@@ -8,7 +8,7 @@ public class Journal extends Item {
 
 	public Journal(String type, int id, int borrowLength, String title, String publisher, int availableStock,
 			int volumeNum, String subject, boolean isDigital) {
-		super(type, id, borrowLength, title, publisher, availableStock);
+		super("Journal", id, borrowLength, title, publisher, availableStock);
 		this.volumeNum = volumeNum;
 		this.subject = subject;
 		this.isDigital = isDigital;

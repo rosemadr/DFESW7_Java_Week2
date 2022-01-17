@@ -11,7 +11,7 @@ public class User {
 	private List<Item> itemsBorrowed = new ArrayList<>();
 	private boolean overdueItems;
 
-	public User(int userID, String surname, String forename, List<Item> itemsBorrowed, boolean overdueItems) {
+	public User(String surname, String forename) {
 		super();
 		this.userID = userID;
 		this.surname = surname;

@@ -60,9 +60,9 @@ public class Book extends Item {
 
 	@Override
 	public String toString() {
-		return "Book [author=" + author + ", genre=" + genre + ", getType()=" + getType() + ", getId()=" + getId()
-				+ ", getBorrowLength()=" + getBorrowLength() + ", getTitle()=" + getTitle() + ", getPublisher()="
-				+ getPublisher() + ", getAvailableStock()=" + getAvailableStock() + "]";
+		return "Item type: " + getType() + ", title: " + getTitle() + ", publisher: " + getPublisher() + ", author: "
+				+ author + ",\ngenre: " + genre + ", library id no.: " + getId() + ", borrow length: "
+				+ getBorrowLength() + " days, available stock: " + getAvailableStock() + " copies.";
 
 	}
 
