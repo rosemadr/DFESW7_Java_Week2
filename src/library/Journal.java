@@ -35,10 +35,9 @@ public class Journal extends Item {
 
 	@Override
 	public String toString() {
-		return "Journal [volumeNum=" + getVolumeNum() + ", Subject=" + getSubject() + ", digital copy=" + isDigital()
-				+ ", getType()=" + getType() + ", getId()=" + getId() + ", getBorrowLength()=" + getBorrowLength()
-				+ ", getTitle()=" + getTitle() + ", getPublisher()=" + getPublisher() + ", getAvailableStock()="
-				+ getAvailableStock() + "]";
+		return "Item type: " + getType() + ", title: " + getTitle() + ", publisher: " + getPublisher() + ", subject: "
+				+ getSubject() + ", digital copy: " + isDigital() + ", library id no.: " + getId() + ", borrow length: "
+				+ getBorrowLength() + " days, available stock: " + getAvailableStock() + " copies.";
 	}
 
 	public int getVolumeNum() {

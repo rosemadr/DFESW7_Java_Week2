@@ -21,9 +21,9 @@ public class Map extends Item {
 
 	@Override
 	public String toString() {
-		return "Map [location=" + location + ", getType()=" + getType() + ", getId()=" + getId()
-				+ ", getBorrowLength()=" + getBorrowLength() + ", getTitle()=" + getTitle() + ", getPublisher()="
-				+ getPublisher() + ", getAvailableStock()=" + getAvailableStock() + "]";
+		return "Item type: " + getType() + ", title: " + getTitle() + ", publisher: " + getPublisher()
+				+ " map location: " + location + ", library id no.: " + getId() + ", borrow length: "
+				+ getBorrowLength() + " days, available stock: " + getAvailableStock() + " copies.";
 	}
 
 	@Override

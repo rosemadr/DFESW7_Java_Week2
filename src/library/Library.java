@@ -59,14 +59,24 @@ public class Library {
 		}
 	}
 
+	public void setupItem(Item item) {
+		if (validateItem(item) == true) {
+
+		} else {
+			System.out.println("Invalid item. Cannot remove that item as item not found.");
+		}
+
+	}
+
 	public void checkoutItem(Item item, User user) {
 		if (validateItem(item) == true & validateUser(user) == true) {
 			if (item.canBeBorrowed(item) == true) {
 				if (item.getAvailableStock() > 0) {
 					user.addItemsBorrowed(item);
 					item.setAvailableStock(item.getAvailableStock() - 1);
-					System.out.println("User " + user.getForename() + user.getSurname() + " has now borrowed " + item
-							+ "this item is due back in " + item.getBorrowLength() + " days.");
+					System.out.println("User " + user.getForename() + " " + user.getSurname() + " has now borrowed the "
+							+ item.getType().toLowerCase() + " " + item.getTitle() + " this item is due back in "
+							+ item.getBorrowLength() + " days.");
 // look up time Java imports and add time info to this method
 				} else {
 					System.out.println("This item can be borrowed, however it is not available at this current time.");
